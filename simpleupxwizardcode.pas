@@ -22,6 +22,7 @@ type
     CheckBox3: TCheckBox;
     CheckBox4: TCheckBox;
     CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
     Label1: TLabel;
     LabeledEdit1: TLabeledEdit;
     LabeledEdit2: TLabeledEdit;
@@ -63,7 +64,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Form1.Caption:='Simple upx wizard 0.7.2';
+ Form1.Caption:='Simple upx wizard 0.8';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -108,6 +109,7 @@ begin
  Form1.CheckBox3.Checked:=False;
  Form1.CheckBox4.Checked:=True;
  Form1.CheckBox5.Checked:=False;
+ Form1.CheckBox6.Checked:=False;
  Form1.LabeledEdit1.Enabled:=False;
  Form1.LabeledEdit2.Enabled:=False;
  Form1.LabeledEdit1.LabelPosition:=lpLeft;
@@ -117,7 +119,7 @@ begin
  Form1.TrackBar1.Orientation:=trHorizontal;
  Form1.TrackBar1.TickStyle:=tsAuto;
  Form1.TrackBar1.Min:=0;
- Form1.TrackBar1.Max:=9;
+ Form1.TrackBar1.Max:=11;
  Form1.TrackBar1.Position:=9;
  Form1.PageControl1.ActivePageIndex:=0;
 end;
@@ -138,6 +140,7 @@ begin
  Form1.CheckBox3.Caption:='Dont compress icons';
  Form1.CheckBox4.Caption:='Dont strip relocations';
  Form1.CheckBox5.Caption:='Create backup';
+ Form1.CheckBox6.Caption:='Force compression';
  Form1.Label1.Caption:='Compress ratio';
 end;
 
@@ -151,7 +154,7 @@ end;
 
 function get_option():string;
 var option:string;
-var ratio:array[0..9] of string=('-1 ','-2 ','-3 ','-4 ','-5 ','-6 ','-7 ','-8 ','-9 ','--best ');
+var ratio:array[0..11] of string=('-1 ','-2 ','-3 ','-4 ','-5 ','-6 ','-7 ','-8 ','-9 ','--best ','--brute ','--ultra-brute ');
 begin
  option:=ratio[Form1.TrackBar1.Position];
  if Form1.CheckBox1.Checked=True then option:=option+'--compress-export=0 ';
@@ -159,6 +162,7 @@ begin
  if Form1.CheckBox3.Checked=True then option:=option+'--compress-icons=0 ';
  if Form1.CheckBox4.Checked=True then option:=option+'--strip-relocs=0 ';
  if Form1.CheckBox5.Checked=True then option:=option+'--backup ';
+ if Form1.CheckBox6.Checked=True then option:=option+'-f ';
  get_option:=option;
 end;
 
