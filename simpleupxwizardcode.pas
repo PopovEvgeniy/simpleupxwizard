@@ -45,17 +45,6 @@ type
 
   end;
 
-procedure window_setup();
-procedure dialog_setup();
-function convert_file_name(source:string): string;
-function execute_program(executable:string;argument:string):Integer;
-procedure interface_setup();
-procedure language_setup();
-procedure setup();
-function get_option():string;
-procedure compress_file(target:string);
-procedure decompress_file(target:string);
-
 var Form1: TForm1;
 
 implementation
@@ -65,7 +54,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Form1.Caption:='Simple upx wizard 0.8.1';
+ Form1.Caption:='Simple upx wizard 0.8.2';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -96,7 +85,7 @@ begin
  try
   code:=ExecuteProcess(executable,argument,[]);
  except
-  On EOSError do code:=-1;
+  code:=-1;
  end;
  execute_program:=code;
 end;
