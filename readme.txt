@@ -1,13 +1,13 @@
                                 SIMPLE UPX WIZARD
 
-                                  Version 0.8.2
+                                  Version 0.8.2.1
 
                          This software made by Popov Evgeniy Alekseyevich
 
 System requirement
 
-Windows 2000 or higher for 32 bit system
-Windows Vista or higher for 64 bit system
+Windows 2000 or higher for 32-bit system
+Windows Vista or higher for 64-bit system
 
 Program description
 
@@ -38,9 +38,10 @@ Change log
 0.3 - 0.4 - New options added
 0.5 - Small changes
 0.6 - User interface improved
-0.7 - 64 bit support added
+0.7 - 64-bit support added
 0.7.1 - Small changes
 0.7.2 - Small bug fixed
 0.7.3 - Small changes
 0.8 - New options added
 0.8.1 - 0.8.2 - Small changes
+0.8.2.1 - Documentation updated
