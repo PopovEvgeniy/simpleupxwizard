@@ -1,6 +1,6 @@
                                 SIMPLE UPX WIZARD
 
-                                  Version 0.8.2.1
+                                  Version 0.8.3
 
                          This software made by Popov Evgeniy Alekseyevich
 
@@ -20,7 +20,7 @@ This program distributed under GNU GENERAL PUBLIC LICENSE.
 Prepare for work
 
 You can download UPX here: https://upx.github.io
-Put executable file of UPX to SIMPLE UPX WIZARD directory before first start.
+Put the executable file of UPX to SIMPLE UPX WIZARD directory before first start.
 
 Contact
 
@@ -45,3 +45,4 @@ Change log
 0.8 - New options added
 0.8.1 - 0.8.2 - Small changes
 0.8.2.1 - Documentation updated
+0.8.3 - Small changes

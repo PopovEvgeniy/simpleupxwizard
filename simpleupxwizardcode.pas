@@ -54,7 +54,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Form1.Caption:='Simple upx wizard 0.8.2';
+ Form1.Caption:='Simple upx wizard 0.8.3';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -156,12 +156,16 @@ begin
  get_option:=option;
 end;
 
-procedure compress_file(target:string);
-var backend,option:string;
+function get_backend():string;
 begin
- backend:=ExtractFilePath(Application.ExeName)+'upx';
+ get_backend:=ExtractFilePath(Application.ExeName)+'upx';
+end;
+
+procedure compress_file(target:string);
+var option:string;
+begin
  option:=get_option()+convert_file_name(target);
- if execute_program(backend,option)=-1 then
+ if execute_program(get_backend(),option)=-1 then
  begin
   ShowMessage('Cant compress target file');
  end;
@@ -169,11 +173,10 @@ begin
 end;
 
 procedure decompress_file(target:string);
-var backend,option:string;
+var option:string;
 begin
- backend:=ExtractFilePath(Application.ExeName)+'upx';
  option:='-d '+convert_file_name(target);
- if execute_program(backend,option)=-1 then
+ if execute_program(get_backend(),option)=-1 then
  begin
   ShowMessage('Cant decompress target file');
  end;
