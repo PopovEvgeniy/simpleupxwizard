@@ -1,6 +1,6 @@
                                 SIMPLE UPX WIZARD
 
-                                  Version 0.8.3
+                                  Version 0.8.4
 
                          This software made by Popov Evgeniy Alekseyevich
 
@@ -29,7 +29,7 @@ You can send me a letter to tuzik87@inbox.ru
 About program modification
 
 Source code included in source.zip archive.
-It can be compiled under Lazarus 2.2.2 or higher.
+It can be compiled under Lazarus 2.2.6 or higher.
 
 Change log
 
@@ -45,4 +45,4 @@ Change log
 0.8 - New options added
 0.8.1 - 0.8.2 - Small changes
 0.8.2.1 - Documentation updated
-0.8.3 - Small changes
+0.8.3 - 0.8.4 - Small changes

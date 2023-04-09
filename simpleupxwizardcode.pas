@@ -5,8 +5,8 @@ unit simpleupxwizardcode;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  ExtCtrls, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  ExtCtrls, StdCtrls, LazFileUtils;
 
 type
 
@@ -54,7 +54,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Form1.Caption:='Simple upx wizard 0.8.3';
+ Form1.Caption:='Simple upx wizard 0.8.4';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -68,7 +68,7 @@ begin
  Form1.OpenDialog1.Filter:='Executable files|*.exe';
 end;
 
-function convert_file_name(source:string): string;
+function convert_file_name(const source:string): string;
 var target:string;
 begin
  target:=source;
@@ -79,7 +79,7 @@ begin
  convert_file_name:=target;
 end;
 
-function execute_program(executable:string;argument:string):Integer;
+function execute_program(const executable:string;const argument:string):Integer;
 var code:Integer;
 begin
  try
@@ -88,6 +88,47 @@ begin
   code:=-1;
  end;
  execute_program:=code;
+end;
+
+function get_option():string;
+var option:string;
+var ratio:array[0..11] of string=('-1 ','-2 ','-3 ','-4 ','-5 ','-6 ','-7 ','-8 ','-9 ','--best ','--brute ','--ultra-brute ');
+begin
+ option:=ratio[Form1.TrackBar1.Position];
+ if Form1.CheckBox1.Checked=True then option:=option+'--compress-export=0 ';
+ if Form1.CheckBox2.Checked=True then option:=option+'--compress-resources=0 ';
+ if Form1.CheckBox3.Checked=True then option:=option+'--compress-icons=0 ';
+ if Form1.CheckBox4.Checked=True then option:=option+'--strip-relocs=0 ';
+ if Form1.CheckBox5.Checked=True then option:=option+'--backup ';
+ if Form1.CheckBox6.Checked=True then option:=option+'-f ';
+ get_option:=option;
+end;
+
+function get_backend():string;
+begin
+ get_backend:=ExtractFilePath(Application.ExeName)+'upx.exe';
+end;
+
+procedure compress_file(const target:string);
+var option:string;
+begin
+ option:=get_option()+convert_file_name(target);
+ if execute_program(get_backend(),option)=-1 then
+ begin
+  ShowMessage('Can not compress target file');
+ end;
+
+end;
+
+procedure decompress_file(const target:string);
+var option:string;
+begin
+ option:='-d '+convert_file_name(target);
+ if execute_program(get_backend(),option)=-1 then
+ begin
+  ShowMessage('Can not decompress target file');
+ end;
+
 end;
 
 procedure interface_setup();
@@ -140,47 +181,6 @@ begin
  dialog_setup();
  interface_setup();
  language_setup();
-end;
-
-function get_option():string;
-var option:string;
-var ratio:array[0..11] of string=('-1 ','-2 ','-3 ','-4 ','-5 ','-6 ','-7 ','-8 ','-9 ','--best ','--brute ','--ultra-brute ');
-begin
- option:=ratio[Form1.TrackBar1.Position];
- if Form1.CheckBox1.Checked=True then option:=option+'--compress-export=0 ';
- if Form1.CheckBox2.Checked=True then option:=option+'--compress-resources=0 ';
- if Form1.CheckBox3.Checked=True then option:=option+'--compress-icons=0 ';
- if Form1.CheckBox4.Checked=True then option:=option+'--strip-relocs=0 ';
- if Form1.CheckBox5.Checked=True then option:=option+'--backup ';
- if Form1.CheckBox6.Checked=True then option:=option+'-f ';
- get_option:=option;
-end;
-
-function get_backend():string;
-begin
- get_backend:=ExtractFilePath(Application.ExeName)+'upx';
-end;
-
-procedure compress_file(target:string);
-var option:string;
-begin
- option:=get_option()+convert_file_name(target);
- if execute_program(get_backend(),option)=-1 then
- begin
-  ShowMessage('Cant compress target file');
- end;
-
-end;
-
-procedure decompress_file(target:string);
-var option:string;
-begin
- option:='-d '+convert_file_name(target);
- if execute_program(get_backend(),option)=-1 then
- begin
-  ShowMessage('Cant decompress target file');
- end;
-
 end;
 
 { TForm1 }
