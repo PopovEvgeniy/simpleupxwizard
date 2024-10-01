@@ -54,7 +54,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Form1.Caption:='Simple upx wizard 0.8.4';
+ Form1.Caption:='Simple upx wizard 0.8.5';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -115,7 +115,7 @@ begin
  option:=get_option()+convert_file_name(target);
  if execute_program(get_backend(),option)=-1 then
  begin
-  ShowMessage('Can not compress target file');
+  ShowMessage('Can not compress the target file');
  end;
 
 end;
@@ -126,7 +126,7 @@ begin
  option:='-d '+convert_file_name(target);
  if execute_program(get_backend(),option)=-1 then
  begin
-  ShowMessage('Can not decompress target file');
+  ShowMessage('Can not decompress the target file');
  end;
 
 end;
@@ -166,11 +166,11 @@ begin
  Form1.OpenDialog1.Title:='Open an executable file';
  Form1.PageControl1.Pages[0].Caption:='Compression';
  Form1.PageControl1.Pages[1].Caption:='Decompression';
- Form1.CheckBox1.Caption:='Dont compress export section';
- Form1.CheckBox2.Caption:='Dont compress resources';
- Form1.CheckBox3.Caption:='Dont compress icons';
- Form1.CheckBox4.Caption:='Dont strip relocations';
- Form1.CheckBox5.Caption:='Create backup';
+ Form1.CheckBox1.Caption:='Dont compress the export section';
+ Form1.CheckBox2.Caption:='Dont compress the resources';
+ Form1.CheckBox3.Caption:='Dont compress the icons';
+ Form1.CheckBox4.Caption:='Dont strip the relocations';
+ Form1.CheckBox5.Caption:='Create a backup';
  Form1.CheckBox6.Caption:='Force compression';
  Form1.Label1.Caption:='Compress ratio';
 end;
