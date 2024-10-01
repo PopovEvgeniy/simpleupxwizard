@@ -33,18 +33,18 @@ It can be compiled under Lazarus 3.6 or higher.
 
 Change log
 
-0.1 — Initial version.
-0.2 — Small changes.
-0.3  — 0.4 — New options have been added.
-0.5 — Small changes.
-0.6 — User interface improved.
-0.7 — 64-bit support has been added.
-0.7.1 — Small changes.
-0.7.2 — Small bug fixed.
-0.7.3 — Small changes.
-0.8 — New options have been added.
-0.8.1 — 0.8.2 — Small changes.
-0.8.2.1 — Documentation updated.
-0.8.3 — 0.8.4 — Small changes.
-0.8.4.1 — Documentation updated.
-0.8.4 — Small changes.
+0.1 â€” Initial version.
+0.2 â€” Small changes.
+0.3  â€” 0.4 â€” New options have been added.
+0.5 â€” Small changes.
+0.6 â€” User interface improved.
+0.7 â€” 64-bit support has been added.
+0.7.1 â€” Small changes.
+0.7.2 â€” Small bug fixed.
+0.7.3 â€” Small changes.
+0.8 â€” New options have been added.
+0.8.1 â€” 0.8.2 â€” Small changes.
+0.8.2.1 â€” Documentation updated.
+0.8.3 â€” 0.8.4 â€” Small changes.
+0.8.4.1 â€” Documentation updated.
+0.8.5 â€” Small changes.
