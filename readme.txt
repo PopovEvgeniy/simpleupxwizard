@@ -1,6 +1,6 @@
                                 SIMPLE UPX WIZARD
 
-                                  Version 0.8.5.1
+                                  Version 0.8.6
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -37,15 +37,16 @@ Change log
 0.2: The small changes.
 0.3-0.4: A new option has been added.
 0.5: The small changes.
-0.6: The user interface improved.
+0.6: The user interface has improved.
 0.7: 64-bit support has been added.
 0.7.1: The small changes.
-0.7.2: A small bug is fixed.
+0.7.2: A small bug has been fixed.
 0.7.3: The small changes.
 0.8: A new option has been added.
 0.8.1-0.8.2: The small changes.
-0.8.2.1: Documentation updated.
+0.8.2.1: The documentation has been updated.
 0.8.3-0.8.4: The small changes.
-0.8.4.1: Documentation updated.
+0.8.4.1: The documentation has been updated.
 0.8.5: The small changes.
-0.8.5.1: Documentation updated.
+0.8.5.1: The documentation has been updated.
+0.8.6: The small changes.

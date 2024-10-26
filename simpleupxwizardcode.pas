@@ -35,6 +35,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure CheckBox4Click(Sender: TObject);
     procedure CheckBox6Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure LabeledEdit1Change(Sender: TObject);
@@ -54,7 +55,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Form1.Caption:='Simple upx wizard 0.8.5';
+ Form1.Caption:='Simple upx wizard 0.8.6';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -226,6 +227,11 @@ end;
 procedure TForm1.Button4Click(Sender: TObject);
 begin
  decompress_file(Form1.LabeledEdit2.Text);
+end;
+
+procedure TForm1.CheckBox4Click(Sender: TObject);
+begin
+ Form1.CheckBox5.Checked:=not Form1.CheckBox4.Checked;
 end;
 
 procedure TForm1.CheckBox6Click(Sender: TObject);
