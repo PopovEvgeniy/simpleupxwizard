@@ -1,4 +1,4 @@
-object Form1: TForm1
+object MainWindow: TMainWindow
   Left = 248
   Height = 266
   Top = 210
@@ -6,34 +6,34 @@ object Form1: TForm1
   Caption = 'Simple upx wizard'
   ClientHeight = 266
   ClientWidth = 620
-  LCLVersion = '4.0.0.1'
+  LCLVersion = '4.0.0.3'
   OnCreate = FormCreate
-  object PageControl1: TPageControl
+  object WorkSpace: TPageControl
     Left = 0
     Height = 252
     Top = 0
     Width = 616
-    ActivePage = TabSheet1
+    ActivePage = CompressSheet
     TabIndex = 0
     TabOrder = 0
-    object TabSheet1: TTabSheet
+    object CompressSheet: TTabSheet
       Caption = 'Compression'
       ClientHeight = 224
       ClientWidth = 608
-      object LabeledEdit1: TLabeledEdit
+      object CompressionField: TLabeledEdit
         Left = 112
         Height = 23
         Top = 16
         Width = 394
-        EditLabel.Height = 15
+        EditLabel.Height = 23
         EditLabel.Width = 52
         EditLabel.Caption = 'Target file'
         EditLabel.ParentColor = False
         LabelPosition = lpLeft
         TabOrder = 0
-        OnChange = LabeledEdit1Change
+        OnChange = CompressionFieldChange
       end
-      object CheckBox1: TCheckBox
+      object ExportCheckBox: TCheckBox
         Left = 16
         Height = 19
         Top = 88
@@ -41,7 +41,7 @@ object Form1: TForm1
         Caption = 'Dont compress the export section'
         TabOrder = 1
       end
-      object CheckBox2: TCheckBox
+      object ResourcesCheckBox: TCheckBox
         Left = 16
         Height = 19
         Top = 119
@@ -49,7 +49,7 @@ object Form1: TForm1
         Caption = 'Dont compress the resources'
         TabOrder = 2
       end
-      object CheckBox3: TCheckBox
+      object IconsCheckBox: TCheckBox
         Left = 16
         Height = 19
         Top = 152
@@ -57,34 +57,34 @@ object Form1: TForm1
         Caption = 'Dont compress the icons'
         TabOrder = 3
       end
-      object CheckBox4: TCheckBox
+      object RelocationCheckBox: TCheckBox
         Left = 328
         Height = 19
         Top = 88
         Width = 151
         Caption = 'Dont strip the relocarions'
         TabOrder = 4
-        OnClick = CheckBox4Click
+        OnClick = RelocationCheckBoxClick
       end
-      object Button1: TButton
+      object OpenCompressedButton: TButton
         Left = 520
         Height = 25
         Top = 16
         Width = 75
         Caption = 'Open'
         TabOrder = 5
-        OnClick = Button1Click
+        OnClick = OpenCompressedButtonClick
       end
-      object Button2: TButton
+      object CompressButton: TButton
         Left = 216
         Height = 25
         Top = 184
         Width = 104
         Caption = 'Compress'
         TabOrder = 6
-        OnClick = Button2Click
+        OnClick = CompressButtonClick
       end
-      object CheckBox5: TCheckBox
+      object BackupCheckBox: TCheckBox
         Left = 328
         Height = 19
         Top = 117
@@ -92,7 +92,7 @@ object Form1: TForm1
         Caption = 'Create a backup'
         TabOrder = 7
       end
-      object Label1: TLabel
+      object RatioPanel: TLabel
         Left = 16
         Height = 15
         Top = 56
@@ -100,7 +100,7 @@ object Form1: TForm1
         Caption = 'Compress ratio'
         ParentColor = False
       end
-      object TrackBar1: TTrackBar
+      object RatioBar: TTrackBar
         Left = 152
         Height = 25
         Top = 56
@@ -108,54 +108,54 @@ object Form1: TForm1
         Position = 0
         TabOrder = 8
       end
-      object CheckBox6: TCheckBox
+      object ForceCheckBox: TCheckBox
         Left = 328
         Height = 19
         Top = 147
         Width = 118
         Caption = 'Force compression'
         TabOrder = 9
-        OnClick = CheckBox6Click
+        OnClick = ForceCheckBoxClick
       end
     end
-    object TabSheet2: TTabSheet
+    object DecompressSheet: TTabSheet
       Caption = 'Decompression'
       ClientHeight = 224
       ClientWidth = 608
-      object LabeledEdit2: TLabeledEdit
+      object DecompressionField: TLabeledEdit
         Left = 104
         Height = 23
         Top = 28
         Width = 296
-        EditLabel.Height = 15
+        EditLabel.Height = 23
         EditLabel.Width = 52
         EditLabel.Caption = 'Target file'
         EditLabel.ParentColor = False
         LabelPosition = lpLeft
         TabOrder = 0
-        OnChange = LabeledEdit2Change
+        OnChange = DecompressionFieldChange
       end
-      object Button3: TButton
+      object OpenDecompressedButton: TButton
         Left = 416
         Height = 25
         Top = 28
         Width = 75
         Caption = 'Open'
         TabOrder = 1
-        OnClick = Button3Click
+        OnClick = OpenDecompressedButtonClick
       end
-      object Button4: TButton
+      object DecompressButton: TButton
         Left = 168
         Height = 25
         Top = 72
         Width = 139
         Caption = 'Decompress'
         TabOrder = 2
-        OnClick = Button4Click
+        OnClick = DecompressButtonClick
       end
     end
   end
-  object OpenDialog1: TOpenDialog
+  object OpenDialog: TOpenDialog
     Left = 560
     Top = 112
   end
