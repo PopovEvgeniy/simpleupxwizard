@@ -1,6 +1,6 @@
                                 Simple upx wizard
 
-                                  Version 0.9
+                                  Version 0.9.0.1
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -15,16 +15,12 @@ This program is a graphic shell for UPX.
 
 License
 
-This program is distributed under GNU GENERAL PUBLIC LICENSE.
+This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
 Prepare
 
 You can download UPX here: https://upx.github.io
 Put the executable file of UPX in the Simple upx wizard directory before the first start.
-
-Contact
-
-You can send me a letter at tuzik87@inbox.ru.
 
 About program modification
 
@@ -53,3 +49,4 @@ Change log
 0.8.7: The source code was recompiled under Lazarus 4.0 RC1.
 0.8.8: The source code was recompiled under Lazarus 4.0 RC3.
 0.8.9-0.9: The small changes.
+0.9.0.1: The documentation has been updated.
