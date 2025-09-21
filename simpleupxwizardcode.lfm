@@ -6,7 +6,7 @@ object MainWindow: TMainWindow
   Caption = 'Simple upx wizard'
   ClientHeight = 266
   ClientWidth = 620
-  LCLVersion = '4.0.0.3'
+  LCLVersion = '4.2.0.0'
   OnCreate = FormCreate
   object WorkSpace: TPageControl
     Left = 0

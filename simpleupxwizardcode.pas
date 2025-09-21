@@ -55,7 +55,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- MainWindow.Caption:='Simple upx wizard 0.9';
+ MainWindow.Caption:='Simple upx wizard 0.9.1';
  MainWindow.BorderStyle:=bsDialog;
  MainWindow.Font.Name:=Screen.MenuFont.Name;
  MainWindow.Font.Size:=14;

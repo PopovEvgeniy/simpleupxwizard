@@ -1,35 +1,32 @@
                                 Simple upx wizard
 
-                                  Version 0.9.0.1
+                                  Version 0.9.1
 
                          This software was made by Popov Evgeniy Alekseyevich
 
-System requirements
+System requirements.
 
 Windows 2000 or higher for 32-bit systems
 Windows Vista or higher for 64-bit systems
 
-Program description
+The program description.
 
 This program is a graphic shell for UPX.
+You can download UPX here: https://upx.github.io
+Put it in the Simple upx wizard directory before the first start.
 
-License
+License.
 
 This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
-Prepare
-
-You can download UPX here: https://upx.github.io
-Put the executable file of UPX in the Simple upx wizard directory before the first start.
-
-About program modification
+The source.code.
 
 The code is included in the source.zip archive.
-It can be compiled under Lazarus 4.0 RC3 or higher.
+It can be compiled under Lazarus 4.2 or higher.
 
-Change log
+Version history.
 
-0.1: Initial version.
+0.1: The initial version.
 0.2: The small changes.
 0.3-0.4: A new option has been added.
 0.5: The small changes.
@@ -50,3 +47,4 @@ Change log
 0.8.8: The source code was recompiled under Lazarus 4.0 RC3.
 0.8.9-0.9: The small changes.
 0.9.0.1: The documentation has been updated.
+0.9.1: The source code was recompiled under Lazarus 4.2.
