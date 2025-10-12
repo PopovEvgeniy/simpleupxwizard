@@ -55,7 +55,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Simple upx wizard';
- MainWindow.Caption:='Simple upx wizard 0.9.1';
+ MainWindow.Caption:='Simple upx wizard 0.9.3';
  MainWindow.BorderStyle:=bsDialog;
  MainWindow.Font.Name:=Screen.MenuFont.Name;
  MainWindow.Font.Size:=14;
@@ -231,7 +231,11 @@ end;
 
 procedure TMainWindow.RelocationCheckBoxClick(Sender: TObject);
 begin
- MainWindow.BackupCheckBox.Checked:=not MainWindow.RelocationCheckBox.Checked;
+ if MainWindow.RelocationCheckBox.Checked=False then
+ begin
+  MainWindow.BackupCheckBox.Checked:=True;
+ end;
+
 end;
 
 procedure TMainWindow.ForceCheckBoxClick(Sender: TObject);

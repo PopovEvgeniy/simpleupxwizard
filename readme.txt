@@ -1,6 +1,6 @@
                                 Simple upx wizard
 
-                                  Version 0.9.1.1
+                                  Version 0.9.3
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -49,3 +49,4 @@ Version history.
 0.9.0.1: The documentation has been updated.
 0.9.1: The source code was recompiled under Lazarus 4.2.
 0.9.1.1: The documentation has been updated.
+0.9.2-0.9.3: The small changes.
