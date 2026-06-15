@@ -1,6 +1,6 @@
                                 Simple upx wizard
 
-                                  Version 0.9.3
+                                  Version 0.9.4
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -22,7 +22,7 @@ This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 The source code.
 
 The code is included in the source.zip archive.
-It can be compiled under Lazarus 4.2 or higher.
+It can be compiled under Lazarus 4.8 or higher.
 
 Version history.
 
@@ -49,4 +49,4 @@ Version history.
 0.9.0.1: The documentation has been updated.
 0.9.1: The source code was recompiled under Lazarus 4.2.
 0.9.1.1: The documentation has been updated.
-0.9.2-0.9.3: The small changes.
+0.9.2-0.9.4: The small changes.
