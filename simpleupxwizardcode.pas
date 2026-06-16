@@ -104,7 +104,7 @@ function TMainWindow.get_option():string;
 var option:string;
 var ratio:array[0..11] of string=('-1 ','-2 ','-3 ','-4 ','-5 ','-6 ','-7 ','-8 ','-9 ','--best ','--brute ','--ultra-brute ');
 begin
- option:=ratio[MainWindow.RatioBar.Position];
+ option:=ratio[Self.RatioBar.Position];
  if Self.ExportCheckBox.Checked=True then option:=option+'--compress-export=0 ';
  if Self.ResourcesCheckBox.Checked=True then option:=option+'--compress-resources=0 ';
  if Self.IconsCheckBox.Checked=True then option:=option+'--compress-icons=0 ';
@@ -128,7 +128,7 @@ end;
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Self.Caption:='Simple upx wizard 0.9.4';
+ Self.Caption:='Simple upx wizard 0.9.5';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
