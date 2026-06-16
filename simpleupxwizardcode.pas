@@ -93,9 +93,9 @@ procedure decompress_file(const target:string);
 var option:string;
 begin
  option:='-d '+convert_file_name(target);
- if execute_program(get_backend(),option)=-1 then
+ if execute_program(get_backend(),option)<>0 then
  begin
-  ShowMessage('Can not decompress the target file');
+  ShowMessage('Cannot decompress the target file');
  end;
 
 end;
@@ -118,9 +118,9 @@ procedure TMainWindow.compress_file(const target:string);
 var option:string;
 begin
  option:=Self.get_option()+convert_file_name(target);
- if execute_program(get_backend(),option)=-1 then
+ if execute_program(get_backend(),option)<>0 then
  begin
-  ShowMessage('Can not compress the target file');
+  ShowMessage('Cannot compress the target file');
  end;
 
 end;
@@ -128,7 +128,7 @@ end;
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Self.Caption:='Simple upx wizard 0.9.5';
+ Self.Caption:='Simple upx wizard 0.9.6';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
