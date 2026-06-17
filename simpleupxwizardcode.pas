@@ -128,7 +128,7 @@ end;
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Self.Caption:='Simple upx wizard 0.9.6';
+ Self.Caption:='Simple upx wizard 0.9.7';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
@@ -198,7 +198,7 @@ end;
 
 procedure TMainWindow.FormCreate(Sender: TObject);
 begin
- setup();
+ Self.setup();
 end;
 
 procedure TMainWindow.CompressionFieldChange(Sender: TObject);
@@ -250,7 +250,11 @@ end;
 
 procedure TMainWindow.ForceCheckBoxClick(Sender: TObject);
 begin
- Self.BackupCheckBox.Checked:=Self.ForceCheckBox.Checked;
+ if Self.ForceCheckBox.Checked=True then
+ begin
+  Self.BackupCheckBox.Checked:=True;
+ end;
+
 end;
 
 end.
