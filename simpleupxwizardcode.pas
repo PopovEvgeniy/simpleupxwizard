@@ -64,7 +64,7 @@ implementation
 
 function get_backend():string;
 begin
- get_backend:=ExtractFilePath(Application.ExeName)+'upx.exe';
+ Result:=ExtractFilePath(Application.ExeName)+'upx.exe';
 end;
 
 function convert_file_name(const source:string): string;
@@ -75,7 +75,7 @@ begin
  begin
   target:='"'+source+'"';
  end;
- convert_file_name:=target;
+ Result:=target;
 end;
 
 function execute_program(const executable:string;const argument:string):Integer;
@@ -86,7 +86,7 @@ begin
  except
   code:=-1;
  end;
- execute_program:=code;
+ Result:=code;
 end;
 
 procedure decompress_file(const target:string);
@@ -111,7 +111,7 @@ begin
  if Self.RelocationCheckBox.Checked=True then option:=option+'--strip-relocs=0 ';
  if Self.BackupCheckBox.Checked=True then option:=option+'--backup ';
  if Self.ForceCheckBox.Checked=True then option:=option+'-f ';
- get_option:=option;
+ Result:=option;
 end;
 
 procedure TMainWindow.compress_file(const target:string);
@@ -128,7 +128,7 @@ end;
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Simple upx wizard';
- Self.Caption:='Simple upx wizard 0.9.7';
+ Self.Caption:='Simple upx wizard 0.9.8';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
@@ -177,10 +177,10 @@ begin
  Self.OpenDialog.Title:='Open an executable file';
  Self.WorkSpace.Pages[0].Caption:='Compression';
  Self.WorkSpace.Pages[1].Caption:='Decompression';
- Self.ExportCheckBox.Caption:='Dont compress the export section';
- Self.ResourcesCheckBox.Caption:='Dont compress the resources';
- Self.IconsCheckBox.Caption:='Dont compress the icons';
- Self.RelocationCheckBox.Caption:='Dont strip the relocations';
+ Self.ExportCheckBox.Caption:='Do not compress the export section';
+ Self.ResourcesCheckBox.Caption:='Do not compress the resources';
+ Self.IconsCheckBox.Caption:='Do not compress the icons';
+ Self.RelocationCheckBox.Caption:='Do not strip the relocations';
  Self.BackupCheckBox.Caption:='Create a backup';
  Self.ForceCheckBox.Caption:='Force compression';
  Self.RatioPanel.Caption:='Compress ratio';
