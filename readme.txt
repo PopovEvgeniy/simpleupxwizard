@@ -1,6 +1,6 @@
                                 Simple upx wizard
 
-                                  Version 0.9.8
+                                  Version 0.9.8.1
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -28,14 +28,14 @@ Version history.
 
 0.1: The initial version.
 0.2: The small changes.
-0.3-0.4: A new option has been added.
+0.3-0.4: The new option has been added.
 0.5: The small changes.
-0.6: The user interface has improved.
+0.6: The user interface has been improved.
 0.7: 64-bit support has been added.
 0.7.1: The small changes.
 0.7.2: A small bug has been fixed.
 0.7.3: The small changes.
-0.8: A new option has been added.
+0.8: The new option has been added.
 0.8.1-0.8.2: The small changes.
 0.8.2.1: The documentation has been updated.
 0.8.3-0.8.4: The small changes.
@@ -50,5 +50,6 @@ Version history.
 0.9.1: The source code was recompiled under Lazarus 4.2.
 0.9.1.1: The documentation has been updated.
 0.9.2-0.9.5: The small changes.
-0.9.6-0.9.7: The user interface has improved.
+0.9.6-0.9.7: The user interface has been improved.
 0.9.8: The small changes.
+0.9.8.1: The documentation has been updated.
